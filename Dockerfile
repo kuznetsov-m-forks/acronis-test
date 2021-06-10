@@ -6,5 +6,6 @@ ENV PYTHONUNBUFFERED 1
 COPY . .
 RUN python -m pip install --upgrade pip \
     && pip install -r requirements.txt --no-cache-dir \
-    && rm requirements.txt
+    && rm requirements.txt \
+    && mkdir static
 CMD python app.py
